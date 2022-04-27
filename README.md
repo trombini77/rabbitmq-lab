@@ -7,3 +7,6 @@ The setup needs to create the .erlang.cookie file in the directory but the permi
 ```
 
 File content is a huge toke :D
+
+PS.: this Docker setup store the RabbitMQ structured data of each cluster container into ./storage directory.
+The setup uses the `cluster_formation.peer_discovery_backend = classic_config` so after the first startup, if the cluster fail to detect all nodes, remove the storage directory and retry.
